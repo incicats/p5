@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --primary-rosa: #FF0099;
+            --primary-blau: #00FFF2;
+            --bg-color: #E6E6E6;
+
+        }
+        div {
+            width: 50%;
+            height: 100%;
+        }
+        section {
+            display: flex;
+            flex-direction: row;
+            padding: 30px;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-color);
+        }
+        section div:first-child {
+            background-color: var(--primary-rosa);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section div:last-child {
+            background-color: var(--primary-blau);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        @media (max-width: 600px)
+        {
+            section {
+                flex-direction: column;
+            }
+            div {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <p>rosa</p>
+        </div>
+        <div>
+            <p>blau</p>
+        </div>
+    </section>
+</body>
+</html>
